@@ -1,0 +1,2526 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions targetNamespace="urn:debisys-soap-services" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="urn:debisys-soap-services" xmlns:intf="urn:debisys-soap-services" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+   <message name="NOCOperationRequest">
+
+      <part name="version" type="xsd:string"/>
+
+      <part name="addressWebService" type="xsd:string"/>
+
+      <part name="queryString" type="xsd:string"/>
+
+   </message>
+
+   <message name="setTagNewCreditAfterTransactionResponse">
+
+   </message>
+
+   <message name="CardSaleResponse">
+
+      <part name="CardSaleReturn" type="xsd:string"/>
+
+   </message>
+
+   <message name="GetTransactionsResponse">
+
+      <part name="GetTransactionsReturn" type="xsd:string"/>
+
+   </message>
+
+   <message name="StoredValueBalanceRequest">
+
+      <part name="version" type="xsd:string"/>
+
+      <part name="terminalId" type="xsd:string"/>
+
+      <part name="clerkId" type="xsd:string"/>
+
+      <part name="productId" type="xsd:string"/>
+
+      <part name="cardNumber" type="xsd:string"/>
+
+      <part name="invoiceNo" type="xsd:string"/>
+
+      <part name="languageOption" type="xsd:string"/>
+
+   </message>
+
+   <message name="CheckTBIDRequest">
+
+      <part name="version" type="xsd:string"/>
+
+      <part name="terminalId" type="xsd:string"/>
+
+      <part name="clerkId" type="xsd:string"/>
+
+      <part name="invoiceNo" type="xsd:string"/>
+
+      <part name="language" type="xsd:string"/>
+
+   </message>
+
+   <message name="GetAccountBalanceRequest">
+
+      <part name="version" type="xsd:string"/>
+
+      <part name="terminalId" type="xsd:string"/>
+
+      <part name="merchantId" type="xsd:string"/>
+
+   </message>
+
+   <message name="CardBalanceResponse">
+
+      <part name="CardBalanceReturn" type="xsd:string"/>
+
+   </message>
+
+   <message name="CommTestResponse">
+
+      <part name="CommTestReturn" type="xsd:string"/>
+
+   </message>
+
+   <message name="GetTransTypeListResponse">
+
+      <part name="GetTransTypeListReturn" type="xsd:string"/>
+
+   </message>
+
+   <message name="PinDistSale_XBorderResponse">
+
+      <part name="PinDistSale_XBorderReturn" type="xsd:string"/>
+
+   </message>
+
+   <message name="PinDistSale_XBorder_01Request">
+
+      <part name="version" type="xsd:string"/>
+
+      <part name="terminalId" type="xsd:string"/>
+
+      <part name="clerkId" type="xsd:string"/>
+
+      <part name="productId" type="xsd:string"/>
+
+      <part name="accountId" type="xsd:string"/>
+
+      <part name="amount" type="xsd:string"/>
+
+      <part name="originCountry" type="xsd:string"/>
+
+      <part name="destinationCountry" type="xsd:string"/>
+
+      <part name="invoiceNo" type="xsd:string"/>
+
+      <part name="languageOption" type="xsd:string"/>
+
+      <part name="transType" type="xsd:int"/>
+
+      <part name="ipAddress" type="xsd:string"/>
+
+   </message>
+
+   <message name="postRequestRequest">
+
+      <part name="request" type="xsd:string"/>
+
+   </message>
+
+   <message name="LookUpBillPaymentMxByInvocieNoRequest">
+
+      <part name="version" type="xsd:string"/>
+
+      <part name="terminalId" type="xsd:string"/>
+
+      <part name="clerkId" type="xsd:string"/>
+
+      <part name="invoiceNo" type="xsd:string"/>
+
+   </message>
+
+   <message name="SubmitPaymentNotificationResponse">
+
+      <part name="SubmitPaymentNotificationReturn" type="xsd:string"/>
+
+   </message>
+
+   <message name="CardRefundRequest">
+
+      <part name="version" type="xsd:string"/>
+
+      <part name="terminalId" type="xsd:string"/>
+
+      <part name="clerkId" type="xsd:string"/>
+
+      <part name="productId" type="xsd:string"/>
+
+      <part name="accountId" type="xsd:string"/>
+
+      <part name="amount" type="xsd:string"/>
+
+      <part name="invoiceNo" type="xsd:string"/>
+
+      <part name="languageOption" type="xsd:string"/>
+
+   </message>
+
+   <message name="LookUpTransactionByInvocieNoResponse">
+
+      <part name="LookUpTransactionByInvocieNoReturn" type="xsd:string"/>
+
+   </message>
+
+   <message name="GiftCardQueryFeeResponse">
+
+      <part name="GiftCardQueryFeeReturn" type="xsd:string"/>
+
+   </message>
+
+   <message name="CheckTransactionByInvoiceNoResponse">
+
+      <part name="CheckTransactionByInvoiceNoReturn" type="xsd:string"/>
+
+   </message>
+
+   <message name="GetBillPaymentBalanceResponse">
+
+      <part name="GetBillPaymentBalanceReturn" type="xsd:string"/>
+
+   </message>
+
+   <message name="CheckTerminalRequest">
+
+      <part name="version" type="xsd:string"/>
+
+      <part name="terminalId" type="xsd:string"/>
+
+   </message>
+
+   <message name="StoredValueActivateRequest">
+
+      <part name="version" type="xsd:string"/>
+
+      <part name="terminalId" type="xsd:string"/>
+
+      <part name="clerkId" type="xsd:string"/>
+
+      <part name="productId" type="xsd:string"/>
+
+      <part name="serialNumber" type="xsd:string"/>
+
+      <part name="amount" type="xsd:string"/>
+
+      <part name="invoiceNo" type="xsd:string"/>
+
+      <part name="languageOption" type="xsd:string"/>
+
+   </message>
+
+   <message name="PINReturnRequestRequest">
+
+      <part name="version" type="xsd:string"/>
+
+      <part name="terminalId" type="xsd:string"/>
+
+      <part name="clerkId" type="xsd:string"/>
+
+      <part name="productId" type="xsd:string"/>
+
+      <part name="accountId" type="xsd:string"/>
+
+      <part name="amount" type="xsd:string"/>
+
+      <part name="invoiceNo" type="xsd:string"/>
+
+      <part name="languageOption" type="xsd:string"/>
+
+   </message>
+
+   <message name="BillPaymentResponse">
+
+      <part name="BillPaymentReturn" type="xsd:string"/>
+
+   </message>
+
+   <message name="SaleAsyncRequest">
+
+      <part name="version" type="xsd:string"/>
+
+      <part name="terminalId" type="xsd:string"/>
+
+      <part name="clerkId" type="xsd:string"/>
+
+      <part name="productId" type="xsd:string"/>
+
+      <part name="accountId" type="xsd:string"/>
+
+      <part name="amount" type="xsd:string"/>
+
+      <part name="invoiceNo" type="xsd:string"/>
+
+      <part name="language" type="xsd:string"/>
+
+      <part name="regCode" type="xsd:string"/>
+
+   </message>
+
+   <message name="GetProductFeeRequest">
+
+      <part name="version" type="xsd:string"/>
+
+      <part name="productId" type="xsd:string"/>
+
+      <part name="amount" type="xsd:string"/>
+
+   </message>
+
+   <message name="StoredValueBalanceResponse">
+
+      <part name="StoredValueBalanceReturn" type="xsd:string"/>
+
+   </message>
+
+   <message name="Login2Request">
+
+      <part name="version" type="xsd:string"/>
+
+      <part name="userName" type="xsd:string"/>
+
+      <part name="password" type="xsd:string"/>
+
+      <part name="languageOption" type="xsd:string"/>
+
+   </message>
+
+   <message name="GetCarrierListResponse">
+
+      <part name="GetCarrierListReturn" type="xsd:string"/>
+
+   </message>
+
+   <message name="sendNotificationRequest">
+
+      <part name="version" type="xsd:string"/>
+
+      <part name="emails" type="xsd:string"/>
+
+      <part name="messages" type="xsd:string"/>
+
+      <part name="subject" type="xsd:string"/>
+
+   </message>
+
+   <message name="TransRefundRequest">
+
+      <part name="version" type="xsd:string"/>
+
+      <part name="terminalId" type="xsd:string"/>
+
+      <part name="clerkId" type="xsd:string"/>
+
+      <part name="productId" type="xsd:string"/>
+
+      <part name="accountId" type="xsd:string"/>
+
+      <part name="amount" type="xsd:string"/>
+
+      <part name="invoiceNo" type="xsd:string"/>
+
+      <part name="languageOption" type="xsd:string"/>
+
+   </message>
+
+   <message name="BillPaymentInfoMxResponse">
+
+      <part name="BillPaymentInfoMxReturn" type="xsd:string"/>
+
+   </message>
+
+   <message name="PinDistRefundRequest">
+
+      <part name="version" type="xsd:string"/>
+
+      <part name="terminalId" type="xsd:string"/>
+
+      <part name="clerkId" type="xsd:string"/>
+
+      <part name="productId" type="xsd:string"/>
+
+      <part name="accountId" type="xsd:string"/>
+
+      <part name="amount" type="xsd:string"/>
+
+      <part name="invoiceNo" type="xsd:string"/>
+
+      <part name="languageOption" type="xsd:string"/>
+
+   </message>
+
+   <message name="GiftCardDeactivateResponse">
+
+      <part name="GiftCardDeactivateReturn" type="xsd:string"/>
+
+   </message>
+
+   <message name="TransRefundResponse">
+
+      <part name="TransRefundReturn" type="xsd:string"/>
+
+   </message>
+
+   <message name="StoredValueDeactivateRequest">
+
+      <part name="version" type="xsd:string"/>
+
+      <part name="terminalId" type="xsd:string"/>
+
+      <part name="clerkId" type="xsd:string"/>
+
+      <part name="productId" type="xsd:string"/>
+
+      <part name="transactionId" type="xsd:string"/>
+
+      <part name="invoiceNo" type="xsd:string"/>
+
+      <part name="languageOption" type="xsd:string"/>
+
+   </message>
+
+   <message name="BillPaymentInfoMxRequest">
+
+      <part name="version" type="xsd:string"/>
+
+      <part name="terminalId" type="xsd:string"/>
+
+      <part name="clerkId" type="xsd:string"/>
+
+      <part name="productId" type="xsd:string"/>
+
+      <part name="accountId" type="xsd:string"/>
+
+      <part name="invoiceNo" type="xsd:string"/>
+
+      <part name="languageOption" type="xsd:string"/>
+
+   </message>
+
+   <message name="GetProductFeeResponse">
+
+      <part name="GetProductFeeReturn" type="xsd:string"/>
+
+   </message>
+
+   <message name="GetCategoryListRequest">
+
+      <part name="version" type="xsd:string"/>
+
+      <part name="terminalId" type="xsd:string"/>
+
+      <part name="transTypeId" type="xsd:string"/>
+
+      <part name="carrierId" type="xsd:string"/>
+
+      <part name="categoryId" type="xsd:string"/>
+
+      <part name="productId" type="xsd:string"/>
+
+   </message>
+
+   <message name="StoredValueQueryFeeRequest">
+
+      <part name="version" type="xsd:string"/>
+
+      <part name="terminalId" type="xsd:string"/>
+
+      <part name="clerkId" type="xsd:string"/>
+
+      <part name="productId" type="xsd:string"/>
+
+      <part name="operation" type="xsd:string"/>
+
+      <part name="amount" type="xsd:string"/>
+
+      <part name="invoiceNo" type="xsd:string"/>
+
+      <part name="languageOption" type="xsd:string"/>
+
+   </message>
+
+   <message name="CheckProviderStatusResponse">
+
+      <part name="CheckProviderStatusReturn" type="xsd:string"/>
+
+   </message>
+
+   <message name="PinDistSale_XBorder_01Response">
+
+      <part name="PinDistSale_XBorder_01Return" type="xsd:string"/>
+
+   </message>
+
+   <message name="TransactionConfirmResponse">
+
+      <part name="TransactionConfirmReturn" type="xsd:string"/>
+
+   </message>
+
+   <message name="BillPaymentSaleMxRequest">
+
+      <part name="version" type="xsd:string"/>
+
+      <part name="terminalId" type="xsd:string"/>
+
+      <part name="clerkId" type="xsd:string"/>
+
+      <part name="productId" type="xsd:string"/>
+
+      <part name="invoiceNo" type="xsd:string"/>
+
+      <part name="languageOption" type="xsd:string"/>
+
+      <part name="fields" type="xsd:string"/>
+
+   </message>
+
+   <message name="GetCategoryListResponse">
+
+      <part name="GetCategoryListReturn" type="xsd:string"/>
+
+   </message>
+
+   <message name="PinDistSaleResponse">
+
+      <part name="PinDistSaleReturn" type="xsd:string"/>
+
+   </message>
+
+   <message name="GetCarrierListRequest">
+
+      <part name="version" type="xsd:string"/>
+
+      <part name="terminalId" type="xsd:string"/>
+
+      <part name="transTypeId" type="xsd:string"/>
+
+      <part name="carrierId" type="xsd:string"/>
+
+      <part name="categoryId" type="xsd:string"/>
+
+      <part name="productId" type="xsd:string"/>
+
+   </message>
+
+   <message name="CheckProviderStatusRequest">
+
+      <part name="version" type="xsd:string"/>
+
+      <part name="terminalId" type="xsd:string"/>
+
+      <part name="productId" type="xsd:string"/>
+
+   </message>
+
+   <message name="GetTransactionsRequest">
+
+      <part name="version" type="xsd:string"/>
+
+      <part name="terminalId" type="xsd:string"/>
+
+      <part name="numberOfTransactions" type="xsd:string"/>
+
+   </message>
+
+   <message name="getTagNewCreditAfterTransactionRequest">
+
+   </message>
+
+   <message name="CardBalanceRequest">
+
+      <part name="version" type="xsd:string"/>
+
+      <part name="terminalId" type="xsd:string"/>
+
+      <part name="clerkId" type="xsd:string"/>
+
+      <part name="productId" type="xsd:string"/>
+
+      <part name="accountId" type="xsd:string"/>
+
+      <part name="amount" type="xsd:string"/>
+
+      <part name="invoiceNo" type="xsd:string"/>
+
+      <part name="languageOption" type="xsd:string"/>
+
+   </message>
+
+   <message name="LoginRequest">
+
+      <part name="version" type="xsd:string"/>
+
+      <part name="userName" type="xsd:string"/>
+
+      <part name="password" type="xsd:string"/>
+
+      <part name="languageOption" type="xsd:string"/>
+
+   </message>
+
+   <message name="GetBProductListResponse">
+
+      <part name="GetBProductListReturn" type="xsd:string"/>
+
+   </message>
+
+   <message name="PinDistSaleUSSDResponse">
+
+      <part name="PinDistSaleUSSDReturn" type="xsd:string"/>
+
+   </message>
+
+   <message name="StoredValueRefundRequest">
+
+      <part name="version" type="xsd:string"/>
+
+      <part name="terminalId" type="xsd:string"/>
+
+      <part name="clerkId" type="xsd:string"/>
+
+      <part name="productId" type="xsd:string"/>
+
+      <part name="transactionId" type="xsd:string"/>
+
+      <part name="invoiceNo" type="xsd:string"/>
+
+      <part name="languageOption" type="xsd:string"/>
+
+   </message>
+
+   <message name="GetProductListRequest">
+
+      <part name="version" type="xsd:string"/>
+
+      <part name="terminalId" type="xsd:string"/>
+
+      <part name="transTypeId" type="xsd:string"/>
+
+      <part name="carrierId" type="xsd:string"/>
+
+      <part name="categoryId" type="xsd:string"/>
+
+      <part name="productId" type="xsd:string"/>
+
+   </message>
+
+   <message name="GiftCardDeactivateRequest">
+
+      <part name="version" type="xsd:string"/>
+
+      <part name="terminalId" type="xsd:string"/>
+
+      <part name="clerkId" type="xsd:string"/>
+
+      <part name="productId" type="xsd:string"/>
+
+      <part name="transactionId" type="xsd:string"/>
+
+      <part name="invoiceNo" type="xsd:string"/>
+
+      <part name="languageOption" type="xsd:string"/>
+
+   </message>
+
+   <message name="getTagNewCreditAfterTransactionResponse">
+
+      <part name="getTagNewCreditAfterTransactionReturn" type="xsd:string"/>
+
+   </message>
+
+   <message name="StoredValueActivateResponse">
+
+      <part name="StoredValueActivateReturn" type="xsd:string"/>
+
+   </message>
+
+   <message name="GetTransTypeListRequest">
+
+      <part name="version" type="xsd:string"/>
+
+      <part name="terminalId" type="xsd:string"/>
+
+      <part name="transTypeId" type="xsd:string"/>
+
+      <part name="carrierId" type="xsd:string"/>
+
+      <part name="categoryId" type="xsd:string"/>
+
+      <part name="productId" type="xsd:string"/>
+
+   </message>
+
+   <message name="LogoutResponse">
+
+      <part name="LogoutReturn" type="xsd:string"/>
+
+   </message>
+
+   <message name="PinDistRefundResponse">
+
+      <part name="PinDistRefundReturn" type="xsd:string"/>
+
+   </message>
+
+   <message name="GetAccountBalanceResponse">
+
+      <part name="GetAccountBalanceReturn" type="xsd:string"/>
+
+   </message>
+
+   <message name="CheckClerkRequest">
+
+      <part name="version" type="xsd:string"/>
+
+      <part name="terminalId" type="xsd:string"/>
+
+      <part name="clerkId" type="xsd:string"/>
+
+   </message>
+
+   <message name="CheckTransactionByInvoiceNoRequest">
+
+      <part name="version" type="xsd:string"/>
+
+      <part name="terminalId" type="xsd:string"/>
+
+      <part name="clerkId" type="xsd:string"/>
+
+      <part name="invoiceNo" type="xsd:string"/>
+
+   </message>
+
+   <message name="PINReturnRequestResponse">
+
+      <part name="PINReturnRequestReturn" type="xsd:string"/>
+
+   </message>
+
+   <message name="sendNotificationResponse">
+
+      <part name="sendNotificationReturn" type="xsd:string"/>
+
+   </message>
+
+   <message name="LoginResponse">
+
+      <part name="LoginReturn" type="xsd:string"/>
+
+   </message>
+
+   <message name="LogoutRequest">
+
+      <part name="version" type="xsd:string"/>
+
+      <part name="userName" type="xsd:string"/>
+
+      <part name="password" type="xsd:string"/>
+
+      <part name="languageOption" type="xsd:string"/>
+
+   </message>
+
+   <message name="GiftCardActivateRequest">
+
+      <part name="version" type="xsd:string"/>
+
+      <part name="terminalId" type="xsd:string"/>
+
+      <part name="clerkId" type="xsd:string"/>
+
+      <part name="productId" type="xsd:string"/>
+
+      <part name="serialNumber" type="xsd:string"/>
+
+      <part name="invoiceNo" type="xsd:string"/>
+
+      <part name="languageOption" type="xsd:string"/>
+
+   </message>
+
+   <message name="GiftCardActivateResponse">
+
+      <part name="GiftCardActivateReturn" type="xsd:string"/>
+
+   </message>
+
+   <message name="CheckTerminalResponse">
+
+      <part name="CheckTerminalReturn" type="xsd:string"/>
+
+   </message>
+
+   <message name="CheckTBIDResponse">
+
+      <part name="CheckTBIDReturn" type="xsd:string"/>
+
+   </message>
+
+   <message name="CommTestRequest">
+
+   </message>
+
+   <message name="GetMerchantBalanceRequest">
+
+      <part name="version" type="xsd:string"/>
+
+      <part name="merchantID" type="xsd:string"/>
+
+      <part name="userName" type="xsd:string"/>
+
+      <part name="password" type="xsd:string"/>
+
+   </message>
+
+   <message name="StoredValueDeactivateResponse">
+
+      <part name="StoredValueDeactivateReturn" type="xsd:string"/>
+
+   </message>
+
+   <message name="CardSaleRequest">
+
+      <part name="version" type="xsd:string"/>
+
+      <part name="terminalId" type="xsd:string"/>
+
+      <part name="clerkId" type="xsd:string"/>
+
+      <part name="productId" type="xsd:string"/>
+
+      <part name="accountId" type="xsd:string"/>
+
+      <part name="amount" type="xsd:string"/>
+
+      <part name="invoiceNo" type="xsd:string"/>
+
+      <part name="languageOption" type="xsd:string"/>
+
+   </message>
+
+   <message name="CheckClerkResponse">
+
+      <part name="CheckClerkReturn" type="xsd:string"/>
+
+   </message>
+
+   <message name="StoredValueQueryFeeResponse">
+
+      <part name="StoredValueQueryFeeReturn" type="xsd:string"/>
+
+   </message>
+
+   <message name="GiftCardQueryFeeRequest">
+
+      <part name="version" type="xsd:string"/>
+
+      <part name="terminalId" type="xsd:string"/>
+
+      <part name="clerkId" type="xsd:string"/>
+
+      <part name="productId" type="xsd:string"/>
+
+      <part name="invoiceNo" type="xsd:string"/>
+
+      <part name="languageOption" type="xsd:string"/>
+
+   </message>
+
+   <message name="StoredValueLoadRequest">
+
+      <part name="version" type="xsd:string"/>
+
+      <part name="terminalId" type="xsd:string"/>
+
+      <part name="clerkId" type="xsd:string"/>
+
+      <part name="productId" type="xsd:string"/>
+
+      <part name="cardNumber" type="xsd:string"/>
+
+      <part name="amount" type="xsd:string"/>
+
+      <part name="invoiceNo" type="xsd:string"/>
+
+      <part name="languageOption" type="xsd:string"/>
+
+   </message>
+
+   <message name="StoredValueLoadResponse">
+
+      <part name="StoredValueLoadReturn" type="xsd:string"/>
+
+   </message>
+
+   <message name="SaleAsyncResponse">
+
+      <part name="SaleAsyncReturn" type="xsd:string"/>
+
+   </message>
+
+   <message name="GetProductListResponse">
+
+      <part name="GetProductListReturn" type="xsd:string"/>
+
+   </message>
+
+   <message name="PinDistSaleUSSDRequest">
+
+      <part name="version" type="xsd:string"/>
+
+      <part name="phoneNumber" type="xsd:string"/>
+
+      <part name="clerkId" type="xsd:string"/>
+
+      <part name="productId" type="xsd:string"/>
+
+      <part name="accountId" type="xsd:string"/>
+
+      <part name="amount" type="xsd:string"/>
+
+      <part name="invoiceNo" type="xsd:string"/>
+
+      <part name="languageOption" type="xsd:string"/>
+
+   </message>
+
+   <message name="TransactionConfirmRequest">
+
+      <part name="version" type="xsd:string"/>
+
+      <part name="terminalId" type="xsd:string"/>
+
+      <part name="transactionId" type="xsd:string"/>
+
+   </message>
+
+   <message name="GiftCardBalanceResponse">
+
+      <part name="GiftCardBalanceReturn" type="xsd:string"/>
+
+   </message>
+
+   <message name="StoredValueRefundResponse">
+
+      <part name="StoredValueRefundReturn" type="xsd:string"/>
+
+   </message>
+
+   <message name="BillPaymentSaleMxResponse">
+
+      <part name="BillPaymentSaleMxReturn" type="xsd:string"/>
+
+   </message>
+
+   <message name="PinDistSaleRequest">
+
+      <part name="version" type="xsd:string"/>
+
+      <part name="terminalId" type="xsd:string"/>
+
+      <part name="clerkId" type="xsd:string"/>
+
+      <part name="productId" type="xsd:string"/>
+
+      <part name="accountId" type="xsd:string"/>
+
+      <part name="amount" type="xsd:string"/>
+
+      <part name="invoiceNo" type="xsd:string"/>
+
+      <part name="languageOption" type="xsd:string"/>
+
+   </message>
+
+   <message name="ApplyPaymentRequest">
+
+      <part name="version" type="xsd:string"/>
+
+      <part name="merchantID" type="xsd:string"/>
+
+      <part name="amount" type="xsd:string"/>
+
+      <part name="description" type="xsd:string"/>
+
+      <part name="refNumber" type="xsd:string"/>
+
+      <part name="userName" type="xsd:string"/>
+
+      <part name="password" type="xsd:string"/>
+
+   </message>
+
+   <message name="LookUpBillPaymentMxByInvocieNoResponse">
+
+      <part name="LookUpBillPaymentMxByInvocieNoReturn" type="xsd:string"/>
+
+   </message>
+
+   <message name="LookUpTransactionByInvocieNoRequest">
+
+      <part name="version" type="xsd:string"/>
+
+      <part name="terminalId" type="xsd:string"/>
+
+      <part name="clerkId" type="xsd:string"/>
+
+      <part name="invoiceNo" type="xsd:string"/>
+
+   </message>
+
+   <message name="postRequestResponse">
+
+      <part name="postRequestReturn" type="xsd:string"/>
+
+   </message>
+
+   <message name="GetMerchantBalanceResponse">
+
+      <part name="GetMerchantBalanceReturn" type="xsd:string"/>
+
+   </message>
+
+   <message name="SubmitPaymentNotificationRequest">
+
+      <part name="version" type="xsd:string"/>
+
+      <part name="terminalId" type="xsd:string"/>
+
+      <part name="amount" type="xsd:string"/>
+
+      <part name="clerkPassword" type="xsd:string"/>
+
+      <part name="documentNumber" type="xsd:string"/>
+
+      <part name="documentDate" type="xsd:string"/>
+
+      <part name="bankCode" type="xsd:string"/>
+
+   </message>
+
+   <message name="GetBProductListRequest">
+
+      <part name="version" type="xsd:string"/>
+
+      <part name="terminalId" type="xsd:string"/>
+
+   </message>
+
+   <message name="Login2Response">
+
+      <part name="Login2Return" type="xsd:string"/>
+
+   </message>
+
+   <message name="GetBillPaymentBalanceRequest">
+
+      <part name="version" type="xsd:string"/>
+
+      <part name="terminalId" type="xsd:string"/>
+
+      <part name="clerkId" type="xsd:string"/>
+
+      <part name="productId" type="xsd:string"/>
+
+      <part name="accountId" type="xsd:string"/>
+
+      <part name="invoiceNo" type="xsd:string"/>
+
+      <part name="languageOption" type="xsd:string"/>
+
+   </message>
+
+   <message name="PinDistSale_XBorderRequest">
+
+      <part name="version" type="xsd:string"/>
+
+      <part name="terminalId" type="xsd:string"/>
+
+      <part name="clerkId" type="xsd:string"/>
+
+      <part name="productId" type="xsd:string"/>
+
+      <part name="accountId" type="xsd:string"/>
+
+      <part name="amount" type="xsd:string"/>
+
+      <part name="originCountry" type="xsd:string"/>
+
+      <part name="destinationCountry" type="xsd:string"/>
+
+      <part name="invoiceNo" type="xsd:string"/>
+
+      <part name="languageOption" type="xsd:string"/>
+
+   </message>
+
+   <message name="GiftCardBalanceRequest">
+
+      <part name="version" type="xsd:string"/>
+
+      <part name="terminalId" type="xsd:string"/>
+
+      <part name="clerkId" type="xsd:string"/>
+
+      <part name="productId" type="xsd:string"/>
+
+      <part name="cardNumber" type="xsd:string"/>
+
+      <part name="invoiceNo" type="xsd:string"/>
+
+      <part name="languageOption" type="xsd:string"/>
+
+   </message>
+
+   <message name="setTagNewCreditAfterTransactionRequest">
+
+      <part name="tagNewCreditAfterTransaction" type="xsd:string"/>
+
+   </message>
+
+   <message name="CardRefundResponse">
+
+      <part name="CardRefundReturn" type="xsd:string"/>
+
+   </message>
+
+   <message name="BillPaymentRequest">
+
+      <part name="version" type="xsd:string"/>
+
+      <part name="terminalId" type="xsd:string"/>
+
+      <part name="clerkId" type="xsd:string"/>
+
+      <part name="productId" type="xsd:string"/>
+
+      <part name="accountId" type="xsd:string"/>
+
+      <part name="amount" type="xsd:string"/>
+
+      <part name="invoiceNo" type="xsd:string"/>
+
+      <part name="languageOption" type="xsd:string"/>
+
+   </message>
+
+   <message name="ApplyPaymentResponse">
+
+      <part name="ApplyPaymentReturn" type="xsd:string"/>
+
+   </message>
+
+   <message name="NOCOperationResponse">
+
+      <part name="NOCOperationReturn" type="xsd:string"/>
+
+   </message>
+
+   <portType name="webServices">
+
+      <operation name="CommTest">
+
+         <input message="impl:CommTestRequest" name="CommTestRequest"/>
+
+         <output message="impl:CommTestResponse" name="CommTestResponse"/>
+
+      </operation>
+
+      <operation name="GetTransactions" parameterOrder="version terminalId numberOfTransactions">
+
+         <input message="impl:GetTransactionsRequest" name="GetTransactionsRequest"/>
+
+         <output message="impl:GetTransactionsResponse" name="GetTransactionsResponse"/>
+
+      </operation>
+
+      <operation name="CheckClerk" parameterOrder="version terminalId clerkId">
+
+         <input message="impl:CheckClerkRequest" name="CheckClerkRequest"/>
+
+         <output message="impl:CheckClerkResponse" name="CheckClerkResponse"/>
+
+      </operation>
+
+      <operation name="CheckTerminal" parameterOrder="version terminalId">
+
+         <input message="impl:CheckTerminalRequest" name="CheckTerminalRequest"/>
+
+         <output message="impl:CheckTerminalResponse" name="CheckTerminalResponse"/>
+
+      </operation>
+
+      <operation name="CardSale" parameterOrder="version terminalId clerkId productId accountId amount invoiceNo languageOption">
+
+         <input message="impl:CardSaleRequest" name="CardSaleRequest"/>
+
+         <output message="impl:CardSaleResponse" name="CardSaleResponse"/>
+
+      </operation>
+
+      <operation name="CardBalance" parameterOrder="version terminalId clerkId productId accountId amount invoiceNo languageOption">
+
+         <input message="impl:CardBalanceRequest" name="CardBalanceRequest"/>
+
+         <output message="impl:CardBalanceResponse" name="CardBalanceResponse"/>
+
+      </operation>
+
+      <operation name="CardRefund" parameterOrder="version terminalId clerkId productId accountId amount invoiceNo languageOption">
+
+         <input message="impl:CardRefundRequest" name="CardRefundRequest"/>
+
+         <output message="impl:CardRefundResponse" name="CardRefundResponse"/>
+
+      </operation>
+
+      <operation name="PinDistSale_XBorder" parameterOrder="version terminalId clerkId productId accountId amount originCountry destinationCountry invoiceNo languageOption">
+
+         <input message="impl:PinDistSale_XBorderRequest" name="PinDistSale_XBorderRequest"/>
+
+         <output message="impl:PinDistSale_XBorderResponse" name="PinDistSale_XBorderResponse"/>
+
+      </operation>
+
+      <operation name="PinDistSale" parameterOrder="version terminalId clerkId productId accountId amount invoiceNo languageOption">
+
+         <input message="impl:PinDistSaleRequest" name="PinDistSaleRequest"/>
+
+         <output message="impl:PinDistSaleResponse" name="PinDistSaleResponse"/>
+
+      </operation>
+
+      <operation name="PinDistSale_XBorder_01" parameterOrder="version terminalId clerkId productId accountId amount originCountry destinationCountry invoiceNo languageOption transType ipAddress">
+
+         <input message="impl:PinDistSale_XBorder_01Request" name="PinDistSale_XBorder_01Request"/>
+
+         <output message="impl:PinDistSale_XBorder_01Response" name="PinDistSale_XBorder_01Response"/>
+
+      </operation>
+
+      <operation name="PinDistSaleUSSD" parameterOrder="version phoneNumber clerkId productId accountId amount invoiceNo languageOption">
+
+         <input message="impl:PinDistSaleUSSDRequest" name="PinDistSaleUSSDRequest"/>
+
+         <output message="impl:PinDistSaleUSSDResponse" name="PinDistSaleUSSDResponse"/>
+
+      </operation>
+
+      <operation name="PinDistRefund" parameterOrder="version terminalId clerkId productId accountId amount invoiceNo languageOption">
+
+         <input message="impl:PinDistRefundRequest" name="PinDistRefundRequest"/>
+
+         <output message="impl:PinDistRefundResponse" name="PinDistRefundResponse"/>
+
+      </operation>
+
+      <operation name="postRequest" parameterOrder="request">
+
+         <input message="impl:postRequestRequest" name="postRequestRequest"/>
+
+         <output message="impl:postRequestResponse" name="postRequestResponse"/>
+
+      </operation>
+
+      <operation name="GetProductList" parameterOrder="version terminalId transTypeId carrierId categoryId productId">
+
+         <input message="impl:GetProductListRequest" name="GetProductListRequest"/>
+
+         <output message="impl:GetProductListResponse" name="GetProductListResponse"/>
+
+      </operation>
+
+      <operation name="GetCarrierList" parameterOrder="version terminalId transTypeId carrierId categoryId productId">
+
+         <input message="impl:GetCarrierListRequest" name="GetCarrierListRequest"/>
+
+         <output message="impl:GetCarrierListResponse" name="GetCarrierListResponse"/>
+
+      </operation>
+
+      <operation name="GetCategoryList" parameterOrder="version terminalId transTypeId carrierId categoryId productId">
+
+         <input message="impl:GetCategoryListRequest" name="GetCategoryListRequest"/>
+
+         <output message="impl:GetCategoryListResponse" name="GetCategoryListResponse"/>
+
+      </operation>
+
+      <operation name="GetTransTypeList" parameterOrder="version terminalId transTypeId carrierId categoryId productId">
+
+         <input message="impl:GetTransTypeListRequest" name="GetTransTypeListRequest"/>
+
+         <output message="impl:GetTransTypeListResponse" name="GetTransTypeListResponse"/>
+
+      </operation>
+
+      <operation name="TransactionConfirm" parameterOrder="version terminalId transactionId">
+
+         <input message="impl:TransactionConfirmRequest" name="TransactionConfirmRequest"/>
+
+         <output message="impl:TransactionConfirmResponse" name="TransactionConfirmResponse"/>
+
+      </operation>
+
+      <operation name="PINReturnRequest" parameterOrder="version terminalId clerkId productId accountId amount invoiceNo languageOption">
+
+         <input message="impl:PINReturnRequestRequest" name="PINReturnRequestRequest"/>
+
+         <output message="impl:PINReturnRequestResponse" name="PINReturnRequestResponse"/>
+
+      </operation>
+
+      <operation name="TransRefund" parameterOrder="version terminalId clerkId productId accountId amount invoiceNo languageOption">
+
+         <input message="impl:TransRefundRequest" name="TransRefundRequest"/>
+
+         <output message="impl:TransRefundResponse" name="TransRefundResponse"/>
+
+      </operation>
+
+      <operation name="GetAccountBalance" parameterOrder="version terminalId merchantId">
+
+         <input message="impl:GetAccountBalanceRequest" name="GetAccountBalanceRequest"/>
+
+         <output message="impl:GetAccountBalanceResponse" name="GetAccountBalanceResponse"/>
+
+      </operation>
+
+      <operation name="SubmitPaymentNotification" parameterOrder="version terminalId amount clerkPassword documentNumber documentDate bankCode">
+
+         <input message="impl:SubmitPaymentNotificationRequest" name="SubmitPaymentNotificationRequest"/>
+
+         <output message="impl:SubmitPaymentNotificationResponse" name="SubmitPaymentNotificationResponse"/>
+
+      </operation>
+
+      <operation name="GetBillPaymentBalance" parameterOrder="version terminalId clerkId productId accountId invoiceNo languageOption">
+
+         <input message="impl:GetBillPaymentBalanceRequest" name="GetBillPaymentBalanceRequest"/>
+
+         <output message="impl:GetBillPaymentBalanceResponse" name="GetBillPaymentBalanceResponse"/>
+
+      </operation>
+
+      <operation name="BillPayment" parameterOrder="version terminalId clerkId productId accountId amount invoiceNo languageOption">
+
+         <input message="impl:BillPaymentRequest" name="BillPaymentRequest"/>
+
+         <output message="impl:BillPaymentResponse" name="BillPaymentResponse"/>
+
+      </operation>
+
+      <operation name="GiftCardActivate" parameterOrder="version terminalId clerkId productId serialNumber invoiceNo languageOption">
+
+         <input message="impl:GiftCardActivateRequest" name="GiftCardActivateRequest"/>
+
+         <output message="impl:GiftCardActivateResponse" name="GiftCardActivateResponse"/>
+
+      </operation>
+
+      <operation name="GiftCardDeactivate" parameterOrder="version terminalId clerkId productId transactionId invoiceNo languageOption">
+
+         <input message="impl:GiftCardDeactivateRequest" name="GiftCardDeactivateRequest"/>
+
+         <output message="impl:GiftCardDeactivateResponse" name="GiftCardDeactivateResponse"/>
+
+      </operation>
+
+      <operation name="GiftCardBalance" parameterOrder="version terminalId clerkId productId cardNumber invoiceNo languageOption">
+
+         <input message="impl:GiftCardBalanceRequest" name="GiftCardBalanceRequest"/>
+
+         <output message="impl:GiftCardBalanceResponse" name="GiftCardBalanceResponse"/>
+
+      </operation>
+
+      <operation name="GiftCardQueryFee" parameterOrder="version terminalId clerkId productId invoiceNo languageOption">
+
+         <input message="impl:GiftCardQueryFeeRequest" name="GiftCardQueryFeeRequest"/>
+
+         <output message="impl:GiftCardQueryFeeResponse" name="GiftCardQueryFeeResponse"/>
+
+      </operation>
+
+      <operation name="StoredValueLoad" parameterOrder="version terminalId clerkId productId cardNumber amount invoiceNo languageOption">
+
+         <input message="impl:StoredValueLoadRequest" name="StoredValueLoadRequest"/>
+
+         <output message="impl:StoredValueLoadResponse" name="StoredValueLoadResponse"/>
+
+      </operation>
+
+      <operation name="StoredValueRefund" parameterOrder="version terminalId clerkId productId transactionId invoiceNo languageOption">
+
+         <input message="impl:StoredValueRefundRequest" name="StoredValueRefundRequest"/>
+
+         <output message="impl:StoredValueRefundResponse" name="StoredValueRefundResponse"/>
+
+      </operation>
+
+      <operation name="StoredValueBalance" parameterOrder="version terminalId clerkId productId cardNumber invoiceNo languageOption">
+
+         <input message="impl:StoredValueBalanceRequest" name="StoredValueBalanceRequest"/>
+
+         <output message="impl:StoredValueBalanceResponse" name="StoredValueBalanceResponse"/>
+
+      </operation>
+
+      <operation name="StoredValueActivate" parameterOrder="version terminalId clerkId productId serialNumber amount invoiceNo languageOption">
+
+         <input message="impl:StoredValueActivateRequest" name="StoredValueActivateRequest"/>
+
+         <output message="impl:StoredValueActivateResponse" name="StoredValueActivateResponse"/>
+
+      </operation>
+
+      <operation name="StoredValueDeactivate" parameterOrder="version terminalId clerkId productId transactionId invoiceNo languageOption">
+
+         <input message="impl:StoredValueDeactivateRequest" name="StoredValueDeactivateRequest"/>
+
+         <output message="impl:StoredValueDeactivateResponse" name="StoredValueDeactivateResponse"/>
+
+      </operation>
+
+      <operation name="StoredValueQueryFee" parameterOrder="version terminalId clerkId productId operation amount invoiceNo languageOption">
+
+         <input message="impl:StoredValueQueryFeeRequest" name="StoredValueQueryFeeRequest"/>
+
+         <output message="impl:StoredValueQueryFeeResponse" name="StoredValueQueryFeeResponse"/>
+
+      </operation>
+
+      <operation name="Login" parameterOrder="version userName password languageOption">
+
+         <input message="impl:LoginRequest" name="LoginRequest"/>
+
+         <output message="impl:LoginResponse" name="LoginResponse"/>
+
+      </operation>
+
+      <operation name="Logout" parameterOrder="version userName password languageOption">
+
+         <input message="impl:LogoutRequest" name="LogoutRequest"/>
+
+         <output message="impl:LogoutResponse" name="LogoutResponse"/>
+
+      </operation>
+
+      <operation name="CheckTransactionByInvoiceNo" parameterOrder="version terminalId clerkId invoiceNo">
+
+         <input message="impl:CheckTransactionByInvoiceNoRequest" name="CheckTransactionByInvoiceNoRequest"/>
+
+         <output message="impl:CheckTransactionByInvoiceNoResponse" name="CheckTransactionByInvoiceNoResponse"/>
+
+      </operation>
+
+      <operation name="LookUpTransactionByInvocieNo" parameterOrder="version terminalId clerkId invoiceNo">
+
+         <input message="impl:LookUpTransactionByInvocieNoRequest" name="LookUpTransactionByInvocieNoRequest"/>
+
+         <output message="impl:LookUpTransactionByInvocieNoResponse" name="LookUpTransactionByInvocieNoResponse"/>
+
+      </operation>
+
+      <operation name="Login2" parameterOrder="version userName password languageOption">
+
+         <input message="impl:Login2Request" name="Login2Request"/>
+
+         <output message="impl:Login2Response" name="Login2Response"/>
+
+      </operation>
+
+      <operation name="GetBProductList" parameterOrder="version terminalId">
+
+         <input message="impl:GetBProductListRequest" name="GetBProductListRequest"/>
+
+         <output message="impl:GetBProductListResponse" name="GetBProductListResponse"/>
+
+      </operation>
+
+      <operation name="CheckProviderStatus" parameterOrder="version terminalId productId">
+
+         <input message="impl:CheckProviderStatusRequest" name="CheckProviderStatusRequest"/>
+
+         <output message="impl:CheckProviderStatusResponse" name="CheckProviderStatusResponse"/>
+
+      </operation>
+
+      <operation name="NOCOperation" parameterOrder="version addressWebService queryString">
+
+         <input message="impl:NOCOperationRequest" name="NOCOperationRequest"/>
+
+         <output message="impl:NOCOperationResponse" name="NOCOperationResponse"/>
+
+      </operation>
+
+      <operation name="sendNotification" parameterOrder="version emails messages subject">
+
+         <input message="impl:sendNotificationRequest" name="sendNotificationRequest"/>
+
+         <output message="impl:sendNotificationResponse" name="sendNotificationResponse"/>
+
+      </operation>
+
+      <operation name="SaleAsync" parameterOrder="version terminalId clerkId productId accountId amount invoiceNo language regCode">
+
+         <input message="impl:SaleAsyncRequest" name="SaleAsyncRequest"/>
+
+         <output message="impl:SaleAsyncResponse" name="SaleAsyncResponse"/>
+
+      </operation>
+
+      <operation name="CheckTBID" parameterOrder="version terminalId clerkId invoiceNo language">
+
+         <input message="impl:CheckTBIDRequest" name="CheckTBIDRequest"/>
+
+         <output message="impl:CheckTBIDResponse" name="CheckTBIDResponse"/>
+
+      </operation>
+
+      <operation name="GetProductFee" parameterOrder="version productId amount">
+
+         <input message="impl:GetProductFeeRequest" name="GetProductFeeRequest"/>
+
+         <output message="impl:GetProductFeeResponse" name="GetProductFeeResponse"/>
+
+      </operation>
+
+      <operation name="ApplyPayment" parameterOrder="version merchantID amount description refNumber userName password">
+
+         <input message="impl:ApplyPaymentRequest" name="ApplyPaymentRequest"/>
+
+         <output message="impl:ApplyPaymentResponse" name="ApplyPaymentResponse"/>
+
+      </operation>
+
+      <operation name="GetMerchantBalance" parameterOrder="version merchantID userName password">
+
+         <input message="impl:GetMerchantBalanceRequest" name="GetMerchantBalanceRequest"/>
+
+         <output message="impl:GetMerchantBalanceResponse" name="GetMerchantBalanceResponse"/>
+
+      </operation>
+
+      <operation name="BillPaymentInfoMx" parameterOrder="version terminalId clerkId productId accountId invoiceNo languageOption">
+
+         <input message="impl:BillPaymentInfoMxRequest" name="BillPaymentInfoMxRequest"/>
+
+         <output message="impl:BillPaymentInfoMxResponse" name="BillPaymentInfoMxResponse"/>
+
+      </operation>
+
+      <operation name="BillPaymentSaleMx" parameterOrder="version terminalId clerkId productId invoiceNo languageOption fields">
+
+         <input message="impl:BillPaymentSaleMxRequest" name="BillPaymentSaleMxRequest"/>
+
+         <output message="impl:BillPaymentSaleMxResponse" name="BillPaymentSaleMxResponse"/>
+
+      </operation>
+
+      <operation name="LookUpBillPaymentMxByInvocieNo" parameterOrder="version terminalId clerkId invoiceNo">
+
+         <input message="impl:LookUpBillPaymentMxByInvocieNoRequest" name="LookUpBillPaymentMxByInvocieNoRequest"/>
+
+         <output message="impl:LookUpBillPaymentMxByInvocieNoResponse" name="LookUpBillPaymentMxByInvocieNoResponse"/>
+
+      </operation>
+
+      <operation name="setTagNewCreditAfterTransaction" parameterOrder="tagNewCreditAfterTransaction">
+
+         <input message="impl:setTagNewCreditAfterTransactionRequest" name="setTagNewCreditAfterTransactionRequest"/>
+
+         <output message="impl:setTagNewCreditAfterTransactionResponse" name="setTagNewCreditAfterTransactionResponse"/>
+
+      </operation>
+
+      <operation name="getTagNewCreditAfterTransaction">
+
+         <input message="impl:getTagNewCreditAfterTransactionRequest" name="getTagNewCreditAfterTransactionRequest"/>
+
+         <output message="impl:getTagNewCreditAfterTransactionResponse" name="getTagNewCreditAfterTransactionResponse"/>
+
+      </operation>
+
+   </portType>
+
+   <binding name="rpcrouterSoapBinding" type="impl:webServices">
+
+      <wsdlsoap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <operation name="CommTest">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <input name="CommTestRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </input>
+
+         <output name="CommTestResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </output>
+
+      </operation>
+
+      <operation name="GetTransactions">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <input name="GetTransactionsRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </input>
+
+         <output name="GetTransactionsResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </output>
+
+      </operation>
+
+      <operation name="CheckClerk">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <input name="CheckClerkRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </input>
+
+         <output name="CheckClerkResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </output>
+
+      </operation>
+
+      <operation name="CheckTerminal">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <input name="CheckTerminalRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </input>
+
+         <output name="CheckTerminalResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </output>
+
+      </operation>
+
+      <operation name="CardSale">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <input name="CardSaleRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </input>
+
+         <output name="CardSaleResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </output>
+
+      </operation>
+
+      <operation name="CardBalance">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <input name="CardBalanceRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </input>
+
+         <output name="CardBalanceResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </output>
+
+      </operation>
+
+      <operation name="CardRefund">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <input name="CardRefundRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </input>
+
+         <output name="CardRefundResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </output>
+
+      </operation>
+
+      <operation name="PinDistSale_XBorder">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <input name="PinDistSale_XBorderRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </input>
+
+         <output name="PinDistSale_XBorderResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </output>
+
+      </operation>
+
+      <operation name="PinDistSale">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <input name="PinDistSaleRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </input>
+
+         <output name="PinDistSaleResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </output>
+
+      </operation>
+
+      <operation name="PinDistSale_XBorder_01">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <input name="PinDistSale_XBorder_01Request">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </input>
+
+         <output name="PinDistSale_XBorder_01Response">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </output>
+
+      </operation>
+
+      <operation name="PinDistSaleUSSD">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <input name="PinDistSaleUSSDRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </input>
+
+         <output name="PinDistSaleUSSDResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </output>
+
+      </operation>
+
+      <operation name="PinDistRefund">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <input name="PinDistRefundRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </input>
+
+         <output name="PinDistRefundResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </output>
+
+      </operation>
+
+      <operation name="postRequest">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <input name="postRequestRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </input>
+
+         <output name="postRequestResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </output>
+
+      </operation>
+
+      <operation name="GetProductList">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <input name="GetProductListRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </input>
+
+         <output name="GetProductListResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </output>
+
+      </operation>
+
+      <operation name="GetCarrierList">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <input name="GetCarrierListRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </input>
+
+         <output name="GetCarrierListResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </output>
+
+      </operation>
+
+      <operation name="GetCategoryList">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <input name="GetCategoryListRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </input>
+
+         <output name="GetCategoryListResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </output>
+
+      </operation>
+
+      <operation name="GetTransTypeList">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <input name="GetTransTypeListRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </input>
+
+         <output name="GetTransTypeListResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </output>
+
+      </operation>
+
+      <operation name="TransactionConfirm">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <input name="TransactionConfirmRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </input>
+
+         <output name="TransactionConfirmResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </output>
+
+      </operation>
+
+      <operation name="PINReturnRequest">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <input name="PINReturnRequestRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </input>
+
+         <output name="PINReturnRequestResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </output>
+
+      </operation>
+
+      <operation name="TransRefund">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <input name="TransRefundRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </input>
+
+         <output name="TransRefundResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </output>
+
+      </operation>
+
+      <operation name="GetAccountBalance">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <input name="GetAccountBalanceRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </input>
+
+         <output name="GetAccountBalanceResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </output>
+
+      </operation>
+
+      <operation name="SubmitPaymentNotification">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <input name="SubmitPaymentNotificationRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </input>
+
+         <output name="SubmitPaymentNotificationResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </output>
+
+      </operation>
+
+      <operation name="GetBillPaymentBalance">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <input name="GetBillPaymentBalanceRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </input>
+
+         <output name="GetBillPaymentBalanceResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </output>
+
+      </operation>
+
+      <operation name="BillPayment">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <input name="BillPaymentRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </input>
+
+         <output name="BillPaymentResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </output>
+
+      </operation>
+
+      <operation name="GiftCardActivate">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <input name="GiftCardActivateRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </input>
+
+         <output name="GiftCardActivateResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </output>
+
+      </operation>
+
+      <operation name="GiftCardDeactivate">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <input name="GiftCardDeactivateRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </input>
+
+         <output name="GiftCardDeactivateResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </output>
+
+      </operation>
+
+      <operation name="GiftCardBalance">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <input name="GiftCardBalanceRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </input>
+
+         <output name="GiftCardBalanceResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </output>
+
+      </operation>
+
+      <operation name="GiftCardQueryFee">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <input name="GiftCardQueryFeeRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </input>
+
+         <output name="GiftCardQueryFeeResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </output>
+
+      </operation>
+
+      <operation name="StoredValueLoad">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <input name="StoredValueLoadRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </input>
+
+         <output name="StoredValueLoadResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </output>
+
+      </operation>
+
+      <operation name="StoredValueRefund">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <input name="StoredValueRefundRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </input>
+
+         <output name="StoredValueRefundResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </output>
+
+      </operation>
+
+      <operation name="StoredValueBalance">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <input name="StoredValueBalanceRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </input>
+
+         <output name="StoredValueBalanceResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </output>
+
+      </operation>
+
+      <operation name="StoredValueActivate">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <input name="StoredValueActivateRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </input>
+
+         <output name="StoredValueActivateResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </output>
+
+      </operation>
+
+      <operation name="StoredValueDeactivate">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <input name="StoredValueDeactivateRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </input>
+
+         <output name="StoredValueDeactivateResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </output>
+
+      </operation>
+
+      <operation name="StoredValueQueryFee">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <input name="StoredValueQueryFeeRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </input>
+
+         <output name="StoredValueQueryFeeResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </output>
+
+      </operation>
+
+      <operation name="Login">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <input name="LoginRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </input>
+
+         <output name="LoginResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </output>
+
+      </operation>
+
+      <operation name="Logout">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <input name="LogoutRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </input>
+
+         <output name="LogoutResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </output>
+
+      </operation>
+
+      <operation name="CheckTransactionByInvoiceNo">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <input name="CheckTransactionByInvoiceNoRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </input>
+
+         <output name="CheckTransactionByInvoiceNoResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </output>
+
+      </operation>
+
+      <operation name="LookUpTransactionByInvocieNo">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <input name="LookUpTransactionByInvocieNoRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </input>
+
+         <output name="LookUpTransactionByInvocieNoResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </output>
+
+      </operation>
+
+      <operation name="Login2">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <input name="Login2Request">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </input>
+
+         <output name="Login2Response">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </output>
+
+      </operation>
+
+      <operation name="GetBProductList">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <input name="GetBProductListRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </input>
+
+         <output name="GetBProductListResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </output>
+
+      </operation>
+
+      <operation name="CheckProviderStatus">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <input name="CheckProviderStatusRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </input>
+
+         <output name="CheckProviderStatusResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </output>
+
+      </operation>
+
+      <operation name="NOCOperation">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <input name="NOCOperationRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </input>
+
+         <output name="NOCOperationResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </output>
+
+      </operation>
+
+      <operation name="sendNotification">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <input name="sendNotificationRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </input>
+
+         <output name="sendNotificationResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </output>
+
+      </operation>
+
+      <operation name="SaleAsync">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <input name="SaleAsyncRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </input>
+
+         <output name="SaleAsyncResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </output>
+
+      </operation>
+
+      <operation name="CheckTBID">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <input name="CheckTBIDRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </input>
+
+         <output name="CheckTBIDResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </output>
+
+      </operation>
+
+      <operation name="GetProductFee">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <input name="GetProductFeeRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </input>
+
+         <output name="GetProductFeeResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </output>
+
+      </operation>
+
+      <operation name="ApplyPayment">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <input name="ApplyPaymentRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </input>
+
+         <output name="ApplyPaymentResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </output>
+
+      </operation>
+
+      <operation name="GetMerchantBalance">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <input name="GetMerchantBalanceRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </input>
+
+         <output name="GetMerchantBalanceResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </output>
+
+      </operation>
+
+      <operation name="BillPaymentInfoMx">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <input name="BillPaymentInfoMxRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </input>
+
+         <output name="BillPaymentInfoMxResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </output>
+
+      </operation>
+
+      <operation name="BillPaymentSaleMx">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <input name="BillPaymentSaleMxRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </input>
+
+         <output name="BillPaymentSaleMxResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </output>
+
+      </operation>
+
+      <operation name="LookUpBillPaymentMxByInvocieNo">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <input name="LookUpBillPaymentMxByInvocieNoRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </input>
+
+         <output name="LookUpBillPaymentMxByInvocieNoResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </output>
+
+      </operation>
+
+      <operation name="setTagNewCreditAfterTransaction">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <input name="setTagNewCreditAfterTransactionRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </input>
+
+         <output name="setTagNewCreditAfterTransactionResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </output>
+
+      </operation>
+
+      <operation name="getTagNewCreditAfterTransaction">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <input name="getTagNewCreditAfterTransactionRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </input>
+
+         <output name="getTagNewCreditAfterTransactionResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:debisys-soap-services" use="encoded"/>
+
+         </output>
+
+      </operation>
+
+   </binding>
+
+   <service name="webServicesService">
+
+      <port binding="impl:rpcrouterSoapBinding" name="rpcrouter">
+
+         <wsdlsoap:address location="http://localhost:8082/soap/servlet/rpcrouter"/>
+
+      </port>
+
+   </service>
+
+</definitions>
